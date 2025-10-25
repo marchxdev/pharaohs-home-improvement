@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pharaohs Home Improvement - Painting, Kitchen & Bath, Decking, Lighting</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+<header>
+  <div class="header-container">
+    <div class="logo-text-group">
+      <img src="images/logo.jpeg" alt="Pharaohs Home Improvement Logo" class="logo">
+      <div class="header-text">
+        <h1>Pharaohs Home Improvement</h1>
+        <p class="tagline">Your trusted partner for Painting, Kitchen & Bath Remodeling, Decking, and Lighting</p>
+      </div>
+    </div>
+    <div class="call-area">
+      <a href="tel:3028642121" class="call-button">📞 Call Now: (302) 864-2121</a>
+    </div>
+  </div>
+</header>
+
+
+
+<nav>
+  <a href="#welcome">Welcome</a>
+  <a href="#lighting">Lighting</a>
+  <a href="#other-services">Other Services</a>
+  <a href="#why-choose-us">Why Choose Us</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+
+  <section id="welcome">
+    <h2>Welcome to Pharaohs Home Improvement</h2>
+    <p>At Pharaohs Home Improvement, we specialize in bringing your home improvement dreams to life. With years of experience in painting, remodeling, decking, and lighting, our team combines craftsmanship with dedication to transform your home beautifully and efficiently.</p>
+    <p>We proudly serve Delaware homeowners who value quality, honesty, and attention to detail. Whether you need to refresh your interior paint, remodel a kitchen, build an outdoor deck, or install custom lighting — we’re here to deliver excellence from start to finish.</p>
+  </section>
+
+<!-- Lighting Section -->
+<section id="lighting">
+  <h2>Lighting</h2>
+  <div class="services-grid">
+    <div class="service-item">
+      <img src="images/chrlight.jpeg" alt="Christmas/Holiday Lighting">
+      <h3>Christmas / Holiday Lighting</h3>
+      <p>Make the season bright with professional holiday light installation. We handle design, installation, timers, and takedown—stress-free and stunning.</p>
+    </div>
+    <div class="service-item">
+      <img src="images/permlight.jpeg" alt="Permanent Outdoor Lighting">
+      <h3>Permanent Outdoor Lighting</h3>
+      <p>Year-round curb appeal and security with low-profile permanent lighting. Choose colors for holidays, game days, and everyday elegance.</p>
+    </div>
+  </div>
+<p style="text-align:center;">
+  <a href="#" class="estimate-open call-button" id="openEstimate">Get Quick Estimate</a>
+</p>
+
+</section>
+
+<!-- Other Services Section -->
+<section id="other-services">
+  <h2>Other Services</h2>
+  <div class="services-grid">
+    <div class="service-item">
+      <h3>Painting</h3>
+      <p>Premium interior and exterior painting with smooth finishes and durable coatings that refresh and protect your home.</p>
+    </div>
+    <div class="service-item">
+      <h3>Kitchen &amp; Bath</h3>
+      <p>From cabinets and countertops to tile and fixtures—we design and deliver beautiful, functional remodels.</p>
+    </div>
+    <div class="service-item">
+      <h3>Decking</h3>
+      <p>Custom decks built to last. Composite or wood, we design for your space and lifestyle with safety and style.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="why-choose-us">
+  <h2>Why Choose Pharaohs Home Improvement</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <h3>Experienced Professionals</h3>
+      <p>Our skilled craftsmen bring expertise and care to every project.</p>
+    </div>
+    <div class="why-item">
+      <h3>Quality Materials</h3>
+      <p>We use only premium-grade materials for durability and beauty.</p>
+    </div>
+    <div class="why-item">
+      <h3>Honest Pricing</h3>
+      <p>Transparent estimates and no hidden fees.</p>
+    </div>
+    <div class="why-item">
+      <h3>Customer Satisfaction</h3>
+      <p>Your happiness is our top priority — every detail matters.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact">
+    <h2>Ready to Transform Your Home?</h2>
+    <p>Let’s talk about your next home improvement project! Call us at <strong>(302) 740-5911</strong> or email <strong>pharaohspaintingservices@gmail.com</strong>.</p>
+
+    <form id="contact-form" action="https://formspree.io/f/mzzjaypk" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <input type="hidden" name="_gotcha" style="display:none" />
+      <input type="submit" value="Send" />
+    </form>
+
+  </section>
+
+<!-- Quick Estimate Modal -->
+<div class="modal" id="estimateModal" aria-hidden="true" role="dialog" aria-labelledby="estimateTitle" aria-modal="true">
+  <div class="modal-backdrop" id="estimateBackdrop"></div>
+
+  <div class="modal-dialog" role="document">
+    <button class="modal-close" id="closeEstimate" aria-label="Close">×</button>
+
+    <h2 id="estimateTitle" style="margin-top:0;">Quick Estimate for Lights</h2>
+    <p class="estimate-lead">Get a fast quote for holiday or permanent lighting. We’ll follow up ASAP.</p>
+
+    <form id="estimate-form" action="https://formspree.io/f/mgvnneok" method="POST">
+      <label for="est-name">Name:</label>
+      <input type="text" id="est-name" name="name" required>
+
+      <label for="est-email">Email:</label>
+      <input type="email" id="est-email" name="email" required>
+
+      <label for="est-phone">Phone:</label>
+      <input type="tel" id="est-phone" name="phone" required>
+
+      <label for="est-address">Address:</label>
+      <input type="text" id="est-address" name="address" placeholder="Street, City, ZIP" required>
+
+      <label>Service Type:</label>
+      <div class="inline-options">
+        <label><input type="radio" name="service_type" value="Holiday Lighting" required> Holiday</label>
+        <label><input type="radio" name="service_type" value="Permanent Lighting" required> Permanent</label>
+      </div>
+
+      <label for="est-message">Message (optional):</label>
+      <textarea id="est-message" name="message" rows="4" placeholder="Tell us about your house, roofline length, photos, timing, etc."></textarea>
+
+      <!-- helpers -->
+      <input type="hidden" name="_subject" value="Quick Estimate Request - Lighting">
+      <input type="text" name="_gotcha" style="display:none">
+
+      <input type="submit" value="Get Estimate">
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Pharaohs Home Improvement. All rights reserved.</p>
+</footer>
+
+<script>
+  (function () {
+    const openBtn = document.getElementById('openEstimate');
+    const modal = document.getElementById('estimateModal');
+    const closeBtn = document.getElementById('closeEstimate');
+    const backdrop = document.getElementById('estimateBackdrop');
+    const firstField = document.getElementById('est-name');
+
+    function openModal(e){
+      if (e) e.preventDefault();
+      modal.classList.add('show');
+      modal.setAttribute('aria-hidden', 'false');
+      setTimeout(()=> firstField && firstField.focus(), 50);
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(){
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    openBtn && openBtn.addEventListener('click', openModal);
+    closeBtn && closeBtn.addEventListener('click', closeModal);
+    backdrop && backdrop.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e)=> { if(e.key === 'Escape') closeModal(); });
+  })();
+</script>
+</body>
+</html>

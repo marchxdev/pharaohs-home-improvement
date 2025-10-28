@@ -1,188 +1,98 @@
 /* === Global Styles === */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff; /* white background */
-}
-
-/* Center section headings by default */
-section h2 {
-    text-align: center;
-    margin-bottom: 14px;
-}
-
-/* Optional: center the welcome blurb text */
-#welcome p {
-    text-align: center;
-    max-width: 900px;
-    margin: 8px auto;
-}
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; background-color: #fff; }
+section h2 { text-align: center; margin-bottom: 14px; }
+#welcome p { text-align: center; max-width: 900px; margin: 8px auto; }
 
 /* === Header === */
-header {
-    background-color: #000; /* black header */
-    color: #fff;
-    padding: 25px 10px;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo-text-group {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.logo {
-    height: 90px; /* larger logo */
-    width: auto;
-    border-radius: 6px;
-}
-
-.header-text h1 {
-    font-size: 2rem; /* larger business name */
-    margin: 0;
-    color: #fff;
-}
-
-/* tagline under the name, in header */
-.tagline {
-    margin: 4px 0 0;
-    font-size: 1rem;
-    color: #e0e0e0;
-}
+header { background-color: #000; color: #fff; padding: 25px 10px; }
+.header-container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+.logo-text-group { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+.logo { height: 90px; width: auto; border-radius: 6px; }
+.header-text h1 { font-size: 2rem; margin: 0; color: #fff; }
+.tagline { margin: 4px 0 0; font-size: 1rem; color: #e0e0e0; }
 
 /* === Call Button === */
 .call-area { text-align: right; }
-
-.call-button {
-    background-color: #b22222;  /* red accent */
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-}
-
+.call-button { background-color: #b22222; color: #fff; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; font-size: 1rem; transition: background .3s ease; }
 .call-button:hover { background-color: #8b1a1a; }
 
 /* === Navigation Bar === */
-nav {
-    background-color: #b22222; /* red nav bar */
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
+nav { background-color: #b22222; padding: 10px; text-align: center; }
+nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
 nav a:hover { text-decoration: underline; }
 
 /* === Section Layout === */
-section {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff; /* white background inside sections */
-}
+section { padding: 20px; max-width: 1200px; margin: 0 auto; background-color: #fff; }
+h1, h2, h3 { color: #b22222; }
 
-h1, h2, h3 { color: #b22222; /* red headings */ }
+/* === Services Grid === */
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+#other-services .services-grid { grid-template-columns: repeat(3, 1fr); }
+.service-item { background: #fafafa; padding: 15px; border: 1px solid #ddd; border-radius: 8px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform .2s ease, box-shadow .2s ease; }
+.service-item:hover { transform: translateY(-4px); box-shadow: 0 4px 10px rgba(0,0,0,.1); }
+.service-item img { max-width: 100%; height: auto; margin-bottom: 10px; border-radius: 6px; }
+.service-item h3 { margin-top: 10px; color: #b22222; }
+.service-item p { margin-top: 8px; }
 
-/* === Services Grid (default 2 per row) === */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* two columns by default */
-    gap: 20px;
-}
-
-/* Force service card content to center neatly */
-.service-item {
-    background: #fafafa;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    display: flex;                 /* center everything inside */
-    flex-direction: column;
-    align-items: center;
-    text-align: center;            /* text centered */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.service-item img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 6px;
-}
-
-.service-item h3 {
-    margin-top: 10px;
-    color: #b22222;
-    text-align: center; /* ensure centered */
-}
-
-.service-item p {
-    margin-top: 8px;
-    text-align: center; /* ensure centered */
-}
-
-/* === Why Choose Us Grid (2 per row like services) === */
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 per row */
-    gap: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.why-item {
-    background: #fafafa;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.why-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
+/* === Why Choose Us === */
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto; }
+.why-item { background: #fafafa; border: 1px solid #ddd; border-radius: 8px; padding: 20px; text-align: center; transition: transform .2s ease, box-shadow .2s ease; }
+.why-item:hover { transform: translateY(-4px); box-shadow: 0 4px 10px rgba(0,0,0,.1); }
 .why-item h3 { color: #b22222; margin-bottom: 8px; }
-.why-item p  { color: #555; }
+.why-item p { color: #555; }
 
-/* === Other Services Grid (3 per row) === */
-#other-services .services-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns per row on desktop */
+/* ===== Carousel ===== */
+.carousel { position: relative; overflow: hidden; border-radius: 12px; background: #000; max-width: 1200px; margin: 0 auto; box-shadow: 0 6px 18px rgba(0,0,0,.12); }
+.carousel-track { display: flex; transition: transform .4s ease-in-out; }
+.slide { min-width: 100%; aspect-ratio: 12 / 7; position: relative; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+.carousel-control { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(0,0,0,.45); color: #fff; cursor: pointer; display: grid; place-items: center; font-size: 28px; }
+.carousel-control.prev { left: 10px; }
+.carousel-control.next { right: 10px; }
+.carousel-control:hover { background: rgba(0,0,0,.65); }
+.carousel-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; border: 0; background: rgba(255,255,255,.45); cursor: pointer; }
+.dot.is-active { background: #fff; }
+
+/* ===== Gallery Grid (Uniform 4:3 Thumbs) ===== */
+.gallery-grid { display: grid; gap: 12px; grid-template-columns: repeat(12, 1fr); }
+.gallery-item { grid-column: span 6; background: #eee; border-radius: 10px; overflow: hidden; position: relative; cursor: pointer; outline: none; aspect-ratio: 4 / 3; display: grid; place-items: center; }
+.gallery-item:focus { box-shadow: 0 0 0 3px #b22222; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 900px) { .gallery-item { grid-column: span 4; } }
+.video-thumb { position: relative; width: 100%; height: 100%; }
+.video-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.play-badge { position: absolute; bottom: 8px; left: 8px; background: rgba(0,0,0,.6); color: #fff; padding: 6px 8px; border-radius: 8px; font-weight: 700; }
+
+/* ===== Lightbox ===== */
+.lightbox { position: fixed; inset: 0; display: none; background: rgba(0,0,0,.9); z-index: 10000; align-items: center; justify-content: center; padding: 24px; }
+.lightbox.is-open { display: flex; }
+.lightbox-content { width: min(1200px, 96vw); height: min(80vh, 70vw); display: grid; place-items: center; position: relative; }
+.lightbox img, .lightbox video { max-width: 100%; max-height: 100%; border-radius: 12px; background: #000; }
+.lightbox-close { position: absolute; top: 16px; right: 16px; font-size: 32px; background: transparent; color: #fff; border: 0; cursor: pointer; }
+.lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.15); color: #fff; border: 0; width: 48px; height: 48px; border-radius: 50%; font-size: 28px; display: grid; place-items: center; cursor: pointer; }
+.lightbox-nav.prev { left: 18px; }
+.lightbox-nav.next { right: 18px; }
+.lightbox-nav:hover { background: rgba(255,255,255,.3); }
+
+/* ===== Modal ===== */
+.modal { position: fixed; inset: 0; z-index: 9999; display: none; }
+.modal.show { display: flex; align-items: center; justify-content: center; }
+.modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.5); }
+.modal-dialog { position: relative; max-width: 640px; margin: 6vh 16px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 10px; padding: 22px; box-shadow: 0 18px 60px rgba(0,0,0,0.25); }
+.modal-close { position: absolute; top: 8px; right: 10px; background: transparent; border: none; font-size: 28px; line-height: 1; cursor: pointer; color: #333; }
+.inline-options { display: flex; gap: 16px; justify-content: center; margin: 6px 0 12px; }
+
+/* === Bigger "Get Quick Estimate" Button === */
+#openEstimate.call-button { font-size: 1.3rem; padding: 18px 36px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform .2s ease, background-color .2s ease; }
+#openEstimate.call-button:hover { background-color: #991a1a; transform: translateY(-2px); }
+
+@media (max-width: 768px) {
+  .modal-dialog { margin: 4vh 12px; }
+  .call-area { margin-top: 16px; }
+  .call-button { display: inline-block; font-size: 1rem; padding: 12px 24px; }
+  header .header-container { flex-direction: column; align-items: center; text-align: center; }
 }
-
-/* === Lists === */
-ul, ol { list-style-type: none; padding: 0; }
-li { margin-bottom: 10px; }
 
 /* === Contact Form === */
 form {
@@ -210,7 +120,6 @@ input, textarea {
   border: 1px solid #ccc;   /* <-- add the color */
   border-radius: 4px;
 }
-
 
 /* === Contact Section (final alignment + visual balance) === */
 #contact {
@@ -287,53 +196,3 @@ input, textarea {
   color: #333;
 }
 
-/* Radio options row */
-.inline-options { 
-  display: flex; 
-  gap: 16px; 
-  justify-content: center; 
-  margin: 6px 0 12px; 
-}
-.inline-options label { font-weight: normal; }
-
-@media (max-width: 768px) {
-  .modal-dialog { margin: 4vh 12px; }
-}
-
-/* Modal visibility + centering */
-.modal {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: none; /* hidden by default */
-}
-.modal.show {
-  display: flex;                 /* center the dialog */
-  align-items: center;
-  justify-content: center;
-}
-.modal-backdrop {
-  position: fixed;               /* fixed so it covers the page */
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-}
-
-
-/* === Adjust Call Button for Mobile === */
-@media (max-width: 768px) {
-  .call-area {
-    margin-top: 16px;        /* push it lower */
-  }
-
-  .call-button {
-    display: inline-block;
-    font-size: 1rem;
-    padding: 12px 24px;
-  }
-
-  header .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}

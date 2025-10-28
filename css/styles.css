@@ -196,3 +196,14 @@ input, textarea {
   color: #333;
 }
 
+/* === Responsive Videos === */
+#gallery video,
+.lightbox video {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;      /* keeps video from being taller than the viewport */
+  border-radius: 10px;
+  object-fit: contain;   /* fit the video inside without cropping */
+}
+
+

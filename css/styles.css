@@ -206,4 +206,11 @@ input, textarea {
   object-fit: contain;   /* fit the video inside without cropping */
 }
 
-
+#gallery img,
+.lightbox img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;      /* keeps images from being taller than the screen */
+  object-fit: contain;   /* fit the image within its box without cropping */
+  border-radius: 10px;
+}

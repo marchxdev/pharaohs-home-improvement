@@ -214,3 +214,31 @@ input, textarea {
   object-fit: contain;   /* fit the image within its box without cropping */
   border-radius: 10px;
 }
+
+/* === Mobile Lightbox Fit Fix === */
+.lightbox { padding: 12px; }
+
+.lightbox-content {
+  width: auto;
+  height: auto;
+  max-width: 96vw;
+  max-height: 90vh;
+  display: grid;
+  place-items: center;
+}
+
+.lightbox img,
+.lightbox video {
+  width: auto;          /* don’t force full width if taller than screen */
+  height: auto;
+  max-width: 96vw;
+  max-height: 90vh;
+  object-fit: contain;  /* keep full media visible */
+  border-radius: 10px;
+}
+
+@media (max-width: 420px) {
+  .lightbox { padding: 8px; }
+  .lightbox img,
+  .lightbox video { max-width: 98vw; max-height: 88vh; }
+}

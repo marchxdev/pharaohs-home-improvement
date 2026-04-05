@@ -237,11 +237,19 @@ input, textarea {
   border-radius: 10px;
 }
 
+.insta-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E1306C;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
 .insta-icon {
-  width: 28px;
-  height: 28px;
-  margin-right: 6px;
-  margin-left: 6px;
+  width: 22px;
+  height: 22px;
 }
 
 @media (max-width: 420px) {

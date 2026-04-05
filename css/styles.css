@@ -237,6 +237,11 @@ input, textarea {
   border-radius: 10px;
 }
 
+.insta-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+}
 
 @media (max-width: 420px) {
   .lightbox { padding: 8px; }

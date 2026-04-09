@@ -12,13 +12,13 @@ header { background-color: #000; color: #fff; padding: 25px 10px; }
 .tagline { margin: 4px 0 0; font-size: 1rem; color: #e0e0e0; }
 
 /* === Call Button === */
-.call-area { text-align: right; }
 .call-area {
   display: flex;
+  flex-direction: row; /* force horizontal */
   align-items: center;
-  gap: 10px; /* space between buttons */
+  gap: 10px;
 }
-.call-button { background-color: #b22222; color: #fff; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; font-size: 1rem; transition: background .3s ease; }
+.call-button { background-color: #b22222; white-space: nowrap; color: #fff; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; font-size: 1rem; transition: background .3s ease; }
 .call-button:hover { background-color: #8b1a1a; }
 
 .insta-button {
